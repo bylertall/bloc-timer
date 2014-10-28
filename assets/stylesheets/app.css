@@ -1,5 +1,5 @@
 .top-section {
-  background-color: #a8ffcc;
+  background-color: #ff7728;
   border-bottom: 1px solid black; }
 
 .navbar .navbar-right li {
@@ -14,10 +14,10 @@
   .timer-counter .timer-numbers
   ul {
     list-style: none;
-    padding: 95px 0 0; }
+    padding: 70px 0 0; }
   .timer-counter li {
     display: inline;
-    font-size: 40px;
+    font-size: 90px;
     font-weight: bold; }
   .timer-counter .pomodoro-counter {
     padding: 0;
