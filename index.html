@@ -4,6 +4,8 @@
     <title>Bloc Timer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
   </head>
   
   <body>
@@ -23,9 +25,14 @@
           </ul>
         </div>
       </nav>
-      <div class="timer-counter">
+      <div class="timer-counter container">
         <!-- Timer counter: timer duration to be selected w/ click of timer nav button; should click of time pause timer? -->
-        <p class="text-center">25:00</p>
+        <div class="timer-numbers">
+          <ul class="text-center">
+            <li id="js-minute">25:</li>
+            <li id="js-second">00</li>
+          </ul>
+        </div>
 
         <ul class="text-center pomodoro-counter">
           <!-- to fill circles for each pomodoro completed -->
@@ -36,14 +43,14 @@
         </ul>
       </div>
     </div>
-     <!-- Timer nav - WORK (25min), SHORT(5min), LONG(20min), STOP -->
+     <!-- Timer nav - WORK (25min), SHORT(5min), LONG(20min), STOP (**MAYBE CHANGE TO PAUSE/RESET) -->
     <nav class="timer-nav navbar">
       <div class="text-center container">
         <ul>
-          <li>WORK</li>
-          <li>SHORT</li>
-          <li>LONG</li>
-          <li>STOP</li>
+          <li id="work">WORK</li>
+          <li id="short">SHORT</li>
+          <li id="long">LONG</li>
+          <li id="stop">STOP</li>
         </ul>
       </div>
     </nav>
@@ -69,9 +76,9 @@
     
     <div class="spacer"></div>
     
-    <div class="footer container">
+    <!-- <div class="footer container">
       <footer>Created by Tyler Ball</footer>
-    </div>
+    </div> -->
 
   </body>
 </html>

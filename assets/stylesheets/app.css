@@ -11,9 +11,13 @@
   margin: -10px auto 20px;
   background-color: white;
   border-radius: 50%; }
-  .timer-counter p {
-    padding-top: 60px;
-    font-size: 100px;
+  .timer-counter .timer-numbers
+  ul {
+    list-style: none;
+    padding: 90px 0 0; }
+  .timer-counter li {
+    display: inline;
+    font-size: 40px;
     font-weight: bold; }
   .timer-counter .pomodoro-counter {
     padding: 0;
