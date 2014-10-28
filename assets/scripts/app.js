@@ -1,10 +1,10 @@
 var startTime = new Date();
-var expiryTime = new Date();
+var endTime = new Date();
 var minuteElem = document.getElementById('js-minute');
 var secondElem = document.getElementById('js-second');
 var timer;
 
-var diffInMs = expiryTime - startTime;
+var diffInMs = endTime - startTime;
 var diffInSecs = Math.round(diffInMs / 1000);
 var amountOfMinutes = Math.floor(diffInSecs / 60);
 var amountOfSeconds = diffInSecs % 60;
@@ -14,25 +14,25 @@ $(document).ready(function() {
   $('#work').click(function() {
     clearInterval(timer);
     timer = null;
-    expiryTime.setMinutes(expiryTime.getMinutes() + 25);
+    endTime.setMinutes(endTime.getMinutes() + 25);
     document.getElementById('js-minute').innerHTML = '25:';
-    document.getElementById('js-second').innerHTML = (amountOfSeconds == 0) ? '0' + amountOfSeconds : amountOfSeconds;
+    document.getElementById('js-second').innerHTML = '00';
     return timer = setInterval(countDown, 1000);
   });
   $('#short').click(function() {
     clearInterval(timer);
     timer = null;
-    expiryTime.setMinutes(expiryTime.getMinutes() + 5);
+    endTime.setMinutes(endTime.getMinutes() + 5);
     document.getElementById('js-minute').innerHTML = '5:';
-    document.getElementById('js-second').innerHTML = (amountOfSeconds == 0) ? '0' + amountOfSeconds : amountOfSeconds;
+    document.getElementById('js-second').innerHTML = '00';
     return timer = setInterval(countDown, 1000);
   });
   $('#long').click(function() {
     clearInterval(timer);
     timer = null;
-    expiryTime.setMinutes(expiryTime.getMinutes() + 20);
+    endTime.setMinutes(endTime.getMinutes() + 20);
     document.getElementById('js-minute').innerHTML = '20:';
-    document.getElementById('js-second').innerHTML = (amountOfSeconds == 0) ? '0' + amountOfSeconds : amountOfSeconds;  
+    document.getElementById('js-second').innerHTML = '00';
     return timer = setInterval(countDown, 1000);
   });
 
@@ -50,7 +50,7 @@ function countDown() {
   var dateNow = new Date();
 
   //If not at the end of the timer, continue countdown
-  if(expiryTime > dateNow) {
+  if(endTime > dateNow) {
     //current countdown values
     var minutes = parseInt(document.getElementById('js-minute').innerHTML);
     var seconds = parseInt(document.getElementById('js-second').innerHTML);
