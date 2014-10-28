@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bloc Timer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/app.css">
+  </head>
+  
+  <body>
+    <!-- HEADER -->
+    <div class="top-section container-fluid">
+      <nav class="header-nav navbar">
+        <div class="container">
+          <div class="timer-header navbar-left">
+            <h1>BLOC TIMER</h1>
+          </div>
+
+          <ul class="navbar-right">
+            <!-- Use passport for sign-in/sign-up -->
+            <li>Sign Up</li>
+            <!-- Help window: to pop-up w/ info on pomodoro and how to use timer (this should be under sign in) -->
+            <li>Help</li>
+          </ul>
+        </div>
+      </nav>
+      <div class="timer-counter">
+        <!-- Timer counter: timer duration to be selected w/ click of timer nav button; should click of time pause timer? -->
+        <p class="text-center">25:00</p>
+
+        <ul class="text-center pomodoro-counter">
+          <!-- to fill circles for each pomodoro completed -->
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+     <!-- Timer nav - WORK (25min), SHORT(5min), LONG(20min), STOP -->
+    <nav class="timer-nav navbar">
+      <div class="text-center container">
+        <ul>
+          <li>WORK</li>
+          <li>SHORT</li>
+          <li>LONG</li>
+          <li>STOP</li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Task list (need 'Add New' button to add task to list) -->
+    <!-- Items, click task to when completed to strikethrough, ability to rearrange w/ click and drag -->
+    <div class="container">
+      <div class="task-list">
+        <table class="table table-striped">
+          <th>TASK LIST</th>
+          <tr>
+            <td>This is your first task</td>
+          </tr>
+          <tr>
+            <td>This is your second task</td>
+          </tr>
+          <tr>
+            <td>One more task for good measure</td>
+          </tr>
+        </table>
+        <button class="add-task button">Add New Task</button>
+      </div>
+    </div>
+    
+    <div class="spacer"></div>
+    
+    <div class="footer container">
+      <footer>Created by Tyler Ball</footer>
+    </div>
+
+  </body>
+</html>
