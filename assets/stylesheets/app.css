@@ -14,18 +14,18 @@
   font-weight: bold; }
 
 .timer-counter {
-  height: 300px;
-  width: 300px;
-  margin: -10px auto 60px;
+  height: 400px;
+  width: 400px;
+  margin: -30px auto 30px;
   background-color: white;
   border-radius: 50%; }
   .timer-counter .timer-numbers
   ul {
     list-style: none;
-    padding: 70px 0 0; }
+    padding: 100px 0 0; }
   .timer-counter li {
     display: inline;
-    font-size: 90px;
+    font-size: 120px;
     font-weight: bold;
     color: #ff7728;
     cursor: pointer; }
