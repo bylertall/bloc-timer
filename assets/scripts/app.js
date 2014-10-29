@@ -1,3 +1,4 @@
+//TIMER
 var startTime;
 var endTime;
 var timer;
@@ -84,3 +85,36 @@ function countDown() {
 function countDownOnComplete() {
   alert('Countdown timer has completed!');
 }
+
+//TASK LIST
+function addTask() {
+  //only allow submit if a task has been entered
+  if(document.getElementById('task-input').value != '') {
+    var input = document.getElementById('task-input').value;
+    var row = document.createElement('tr');
+    var data = document.createElement('td');
+    var textnode = document.createTextNode(input);
+    row.appendChild(data);
+    data.appendChild(textnode);
+    document.getElementById('task-body').appendChild(row).appendChild(data);
+    document.getElementById('task-input').value = '';
+  } else {
+    return false;
+  }
+}
+
+//press enter in text input to submit
+function submitTask() {
+  if (event.keyCode == 13) {
+    addTask();
+    return false;
+  }
+};
+
+
+
+
+
+
+
+
