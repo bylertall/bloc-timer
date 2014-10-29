@@ -11,30 +11,28 @@ var diffInSecs = Math.round(diffInMs / 1000);
 var amountOfMinutes = Math.floor(diffInSecs / 60);
 var amountOfSeconds = diffInSecs % 60;
 
-$(document).ready(function() {
-  $('#work').click(function () {
-    timeSelector(25);
-  });
-  $('#short').click(function () {
-    timeSelector(5);
-  });
-  $('#long').click(function () {
-    timeSelector(20);
-  });
-  $('#play-pause').click(function() {
-    if(timer === null) {
-      var dateNow = new Date();
-      endTime.setMinutes(dateNow.getMinutes() + currentMin);
-      endTime.setSeconds(dateNow.getSeconds() + currentSec);
-      return timer = setInterval(countDown, 1000);
-    }
-    if(timer != null) {
-      clearInterval(timer);
-      timer = null;
-      return currentMin = parseInt(document.getElementById('js-minute').innerHTML),
-             currentSec = parseInt(document.getElementById('js-second').innerHTML);
-    };
-  });
+$('#work').click(function () {
+  timeSelector(25);
+});
+$('#short').click(function () {
+  timeSelector(5);
+});
+$('#long').click(function () {
+  timeSelector(20);
+});
+$('#play-pause').click(function() {
+  if(timer === null) {
+    var dateNow = new Date();
+    endTime.setMinutes(dateNow.getMinutes() + currentMin);
+    endTime.setSeconds(dateNow.getSeconds() + currentSec);
+    return timer = setInterval(countDown, 1000);
+  }
+  if(timer != null) {
+    clearInterval(timer);
+    timer = null;
+    return currentMin = parseInt(document.getElementById('js-minute').innerHTML),
+           currentSec = parseInt(document.getElementById('js-second').innerHTML);
+  };
 });
 
 var timeSelector = function(time) {
@@ -86,6 +84,16 @@ function countDownOnComplete() {
   alert('Countdown timer has completed!');
 }
 
+//POMODORO COUNTERS
+//Fill on single click
+$('.pomodoro-counter').click(function() {
+  $(this).toggleClass('fill');
+});
+//Unfill all on dbl click
+$('.pomodoro-counter').dblclick(function() {
+  $('.pomodoro-counter').removeClass('fill');
+});
+
 //TASK LIST
 function addTask() {
   //only allow submit if a task has been entered
@@ -110,6 +118,8 @@ function submitTask() {
     return false;
   }
 };
+
+
 
 
 

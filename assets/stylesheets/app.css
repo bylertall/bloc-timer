@@ -1,3 +1,11 @@
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 .top-section {
   background-color: #ff7728; }
 
@@ -29,16 +37,18 @@
     font-weight: bold;
     color: #ff7728;
     cursor: pointer; }
-  .timer-counter .pomodoro-counter {
+  .timer-counter ul {
     padding: 0;
     list-style: none;
     padding-bottom: 15px; }
-    .timer-counter .pomodoro-counter li {
+    .timer-counter ul .pomodoro-counter {
       border: solid 1px #ff7728;
       border-radius: 50%;
       width: 25px;
       height: 25px;
       display: inline-block; }
+    .timer-counter ul .fill {
+      background-color: #ff7728; }
 
 .timer-nav {
   margin-top: 25px; }
