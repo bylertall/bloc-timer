@@ -110,14 +110,17 @@ function addTask() {
     return false;
   }
 }
-
 //press enter in text input to submit
 function submitTask() {
   if (event.keyCode == 13) {
     addTask();
     return false;
   }
-};
+}
+//strikethrough list item when clicked
+$('#task-body').on('click', 'tr', function() {
+  $(this).toggleClass('strikethrough');
+});
 
 
 

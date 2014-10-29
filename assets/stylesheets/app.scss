@@ -95,6 +95,9 @@
     border-bottom: 1px solid #ff7728;
     padding-bottom: 15px;
   }
+  tr {
+    cursor: pointer;
+  }
   td {
     border-top: none !important;
     border-bottom: 1px solid #c9c9c9;
@@ -118,6 +121,9 @@
     background-color: #ff7728;
     color: white;
     border: none;
+  }
+  .strikethrough {
+    text-decoration: line-through;
   }
 }
 

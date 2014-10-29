@@ -80,6 +80,8 @@
     font-size: 30px;
     border-bottom: 1px solid #ff7728;
     padding-bottom: 15px; }
+  .task-list tr {
+    cursor: pointer; }
   .task-list td {
     border-top: none !important;
     border-bottom: 1px solid #c9c9c9;
@@ -100,6 +102,8 @@
     background-color: #ff7728;
     color: white;
     border: none; }
+  .task-list .strikethrough {
+    text-decoration: line-through; }
 
 .spacer {
   height: 100px; }
