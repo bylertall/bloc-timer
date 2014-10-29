@@ -1,6 +1,8 @@
 var startTime;
 var endTime;
 var timer;
+var currentMin;
+var currentSec;
 var minuteElem = document.getElementById('js-minute');
 var secondElem = document.getElementById('js-second');
 var diffInMs = endTime - startTime;
@@ -17,6 +19,20 @@ $(document).ready(function() {
   });
   $('#long').click(function () {
     timeSelector(20);
+  });
+  $('#play-pause').click(function() {
+    if(timer === null) {
+      var dateNow = new Date();
+      endTime.setMinutes(dateNow.getMinutes() + currentMin);
+      endTime.setSeconds(dateNow.getSeconds() + currentSec);
+      return timer = setInterval(countDown, 1000);
+    }
+    if(timer != null) {
+      clearInterval(timer);
+      timer = null;
+      return currentMin = parseInt(document.getElementById('js-minute').innerHTML),
+             currentSec = parseInt(document.getElementById('js-second').innerHTML);
+    };
   });
 });
 
