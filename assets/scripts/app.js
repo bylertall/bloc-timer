@@ -7,17 +7,6 @@ var diffInMs = endTime - startTime;
 var diffInSecs = Math.round(diffInMs / 1000);
 var amountOfMinutes = Math.floor(diffInSecs / 60);
 var amountOfSeconds = diffInSecs % 60;
-var timeSelector = function(time) {
-  startTime = new Date();
-  endTime = new Date();
-  clearInterval(timer);
-  timer = null;
-  endTime.setMinutes(endTime.getMinutes() + time);
-  document.getElementById('js-minute').innerHTML = time;
-  document.getElementById('js-second').innerHTML = '00';
-
-  return timer = setInterval(countDown, 1000);
-}
 
 $(document).ready(function() {
   $('#work').click(function () {
@@ -30,6 +19,18 @@ $(document).ready(function() {
     timeSelector(20);
   });
 });
+
+var timeSelector = function(time) {
+  startTime = new Date();
+  endTime = new Date();
+  clearInterval(timer);
+  timer = null;
+  endTime.setMinutes(endTime.getMinutes() + time);
+  document.getElementById('js-minute').innerHTML = time;
+  document.getElementById('js-second').innerHTML = '00';
+
+  return timer = setInterval(countDown, 1000);
+}
 
 function countDown() {
   var dateNow = new Date();
