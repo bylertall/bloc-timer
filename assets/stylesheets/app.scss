@@ -1,6 +1,5 @@
 .top-section {
   background-color: #ff7728;
-  border-bottom: 1px solid black;
 }
 .navbar {
   .navbar-right {
@@ -13,7 +12,8 @@
   }
   .timer-header h1{
     color: white;
-    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
     font-weight: bold;
   }
 }
@@ -56,13 +56,20 @@
   ul {
     list-style: none;
   }
+  .nav-buttons {
+    padding: 0;
+  }
   li{
     display: inline-block;
-    border: 1px solid black;
-    font-size: 30px;
-    padding: 0 10px;
-    margin-right: 35px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    margin: 0 20px;
     cursor: pointer;
+    color: white;
+    background-color: #ff7728;
+    line-height: 90px;
+    border-radius: 5%;
+    width: 155px;
   }
 }
 
