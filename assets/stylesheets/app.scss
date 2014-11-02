@@ -6,10 +6,14 @@
   -ms-user-select: none;
   user-select: none;
 }
-.top-section {
+.header-container {
   background-color: #ff7728;
-}
-.navbar {
+  h1{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+  }
   .navbar-right {
     margin-top: 20px;
     li{
@@ -18,55 +22,49 @@
       margin-bottom: 5px;
     }
   }
-  .timer-header h1{
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    font-size: 70px;
-    font-weight: bold;
-  }
 }
-.timer-counter {
-  height: 400px;
-  width: 400px;
-  margin: -30px auto 30px;
-  background-color: white;
-  border-radius: 50%;
-  .timer-numbers
+.timer-container {
+  background-color: #ff7728;
+  .timer-circle {
+    height: 400px;
+    width: 400px;
+    margin: -30px auto 30px;
+    background-color: white;
+    border-radius: 50%;
+    .timer-numbers {
+      font-size: 120px;
+      font-weight: bold;
+      position: relative;
+      left: 50px; 
+      padding: 100px 0 0; 
+      color: #ff7728;
+      cursor: pointer;
+    }
     ul {
+      padding: 0;
       list-style: none;
-      padding: 100px 0 0;
-    }
-      li {
-        display: inline;
-        font-size: 120px;
-        font-weight: bold;
-        color: #ff7728;
-        cursor: pointer;
-      }
-  ul {
-    padding: 0;
-    list-style: none;
-    padding-bottom: 15px;
+      padding-bottom: 15px;
 
-    .pomodoro-counter {
-      border: solid 1px #ff7728;
-      border-radius: 50%;
-      width: 25px;
-      height: 25px;
-      display: inline-block;
-    }
-    .fill {
-      background-color: #ff7728;
+      .pomodoro-counter {
+        border: solid 1px #ff7728;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+      }
+      .fill {
+        background-color: #ff7728;
+      }
     }
   }
 }
 
-.timer-nav {
+.timer-options {
   margin-top: 25px;
   ul {
     list-style: none;
   }
-  .nav-buttons {
+  .timer-buttons {
     padding: 0;
   }
   li{

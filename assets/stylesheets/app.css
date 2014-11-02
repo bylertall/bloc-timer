@@ -6,57 +6,56 @@
   -ms-user-select: none;
   user-select: none; }
 
-.top-section {
+.header-container {
   background-color: #ff7728; }
-
-.navbar .navbar-right {
-  margin-top: 20px; }
-  .navbar .navbar-right li {
-    list-style: none;
+  .header-container h1 {
     color: white;
-    margin-bottom: 5px; }
-.navbar .timer-header h1 {
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  font-size: 70px;
-  font-weight: bold; }
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    font-weight: bold; }
+  .header-container .navbar-right {
+    margin-top: 20px; }
+    .header-container .navbar-right li {
+      list-style: none;
+      color: white;
+      margin-bottom: 5px; }
 
-.timer-counter {
-  height: 400px;
-  width: 400px;
-  margin: -30px auto 30px;
-  background-color: white;
-  border-radius: 50%; }
-  .timer-counter .timer-numbers
-  ul {
-    list-style: none;
-    padding: 100px 0 0; }
-  .timer-counter li {
-    display: inline;
-    font-size: 120px;
-    font-weight: bold;
-    color: #ff7728;
-    cursor: pointer; }
-  .timer-counter ul {
-    padding: 0;
-    list-style: none;
-    padding-bottom: 15px; }
-    .timer-counter ul .pomodoro-counter {
-      border: solid 1px #ff7728;
-      border-radius: 50%;
-      width: 25px;
-      height: 25px;
-      display: inline-block; }
-    .timer-counter ul .fill {
-      background-color: #ff7728; }
+.timer-container {
+  background-color: #ff7728; }
+  .timer-container .timer-circle {
+    height: 400px;
+    width: 400px;
+    margin: -30px auto 30px;
+    background-color: white;
+    border-radius: 50%; }
+    .timer-container .timer-circle .timer-numbers {
+      font-size: 120px;
+      font-weight: bold;
+      position: relative;
+      left: 50px;
+      padding: 100px 0 0;
+      color: #ff7728;
+      cursor: pointer; }
+    .timer-container .timer-circle ul {
+      padding: 0;
+      list-style: none;
+      padding-bottom: 15px; }
+      .timer-container .timer-circle ul .pomodoro-counter {
+        border: solid 1px #ff7728;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: inline-block; }
+      .timer-container .timer-circle ul .fill {
+        background-color: #ff7728; }
 
-.timer-nav {
+.timer-options {
   margin-top: 25px; }
-  .timer-nav ul {
+  .timer-options ul {
     list-style: none; }
-  .timer-nav .nav-buttons {
+  .timer-options .timer-buttons {
     padding: 0; }
-  .timer-nav li {
+  .timer-options li {
     display: inline-block;
     font-family: 'Oswald', sans-serif;
     font-size: 40px;

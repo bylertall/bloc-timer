@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="BlocTimer">
   <head>
     <title>Bloc Timer</title>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
   </head>
   
-  <body>
+  <body ng-controller="MainCtrl as main">
     <!-- HEADER -->
-    <div class="top-section container-fluid">
+    <div class="header-container container-fluid">
       <nav class="header-nav navbar">
         <div class="container">
           <div class="timer-header navbar-left">
-            <h1>BLOC TIMER</h1>
+            <h1>{{title}}</h1>
           </div>
 
           <ul class="navbar-right">
@@ -25,36 +26,11 @@
           </ul>
         </div>
       </nav>
-      <div class="noselect timer-counter">
-        <div class="timer-numbers">
-          <ul class="text-center" id="play-pause">
-            <li id="js-minute">25</li>
-            <li>:</li>
-            <li id="js-second">00</li>
-          </ul>
-        </div>
-
-        <ul class="text-center">
-          <!-- fill circles for each pomodoro completed -->
-          <li class="pomodoro-counter"></li>
-          <li class="pomodoro-counter"></li>
-          <li class="pomodoro-counter"></li>
-          <li class="pomodoro-counter"></li>
-        </ul>
-      </div>
     </div>
 
-    <nav class="timer-nav navbar">
-      <div class="text-center container">
-        <ul class="nav-buttons">
-          <li id="work">WORK</li>
-          <li id="short">SHORT</li>
-          <li id="long">LONG</li>
-        </ul>
-      </div>
-    </nav>
+    <div ui-view></div>
     <!-- Items, click task to when completed to strikethrough, ability to rearrange w/ click and drag -->
-    <div class="noselect task-container container">
+    <!-- <div class="noselect task-container container">
       <div class="task-list">
         <h1>TASK LIST</h1>
         <table class="table table-striped">
@@ -72,7 +48,7 @@
     
     <div class="spacer"></div>
     
-    <!-- <div class="footer container">
+    <div class="footer container">
       <footer>Created by Tyler Ball</footer>
     </div> -->
 
