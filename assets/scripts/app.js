@@ -75,4 +75,4 @@ blocTimer.filter('timecode', function() {
 
     return output;
   }
-})
+});

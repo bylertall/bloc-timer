@@ -40,7 +40,7 @@
       padding: 0;
       list-style: none;
       padding-bottom: 15px; }
-      .timer-container .timer-circle ul .pomodoro-counter {
+      .timer-container .timer-circle ul li {
         border: solid 1px #ff7728;
         border-radius: 50%;
         width: 25px;
