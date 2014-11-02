@@ -7,7 +7,15 @@ blocTimer.config(['$stateProvider', '$locationProvider', function($stateProvider
     url:'',
     controller: 'MainCtrl',
     /*COME BACK TO ADD VIEW FOR TASK LIST????*/
-    templateUrl: 'assets/templates/timer.html'
+    views: {
+      'timer': {
+        templateUrl: 'assets/templates/timer.html'
+      },
+      'tasklist': {
+        controller: 'TaskCtrl',
+        templateUrl: 'assets/templates/tasklist.html'
+      }
+    }
   });
 }]);
 
@@ -42,6 +50,18 @@ blocTimer.controller('MainCtrl', ['$scope', '$interval', function($scope, $inter
   $scope.onComplete = function() {
     alert('Countdown timer has completed!');
   };
+}]);
+
+blocTimer.controller('TaskCtrl', ['$scope', function($scope) {
+  $scope.taskTitle = 'TASK LIST';
+  $scope.list = [];
+  $scope.task;
+  $scope.submit = function() {
+    if($scope.task) {
+      $scope.list.push(this.task);
+      $scope.task = '';
+    }
+  }
 }]);
 
 blocTimer.filter('timecode', function() {

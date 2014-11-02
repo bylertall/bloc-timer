@@ -28,29 +28,8 @@
       </nav>
     </div>
 
-    <div ui-view></div>
-    <!-- Items, click task to when completed to strikethrough, ability to rearrange w/ click and drag -->
-    <!-- <div class="noselect task-container container">
-      <div class="task-list">
-        <h1>TASK LIST</h1>
-        <table class="table table-striped">
-          <tbody id="task-body">
-          </tbody>
-        </table>
-        <div class="add-task text-center">
-          <form>
-            <input id="task-input" type="text" name="newtask" placeholder="Enter New Task" onkeydown="return submitTask()" autocomplete="off"/>
-            <input id="task-submit" type="button" onclick="addTask()" value="ADD TASK"/>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-    <div class="spacer"></div>
-    
-    <div class="footer container">
-      <footer>Created by Tyler Ball</footer>
-    </div> -->
+    <div ui-view = "timer"></div>
+    <div ui-view = "tasklist"></div>
 
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
