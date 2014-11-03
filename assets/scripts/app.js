@@ -75,6 +75,20 @@ blocTimer.directive('taskItem', function() {
   }
 });
 
+blocTimer.directive('pomodoroCounter', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      element.bind('click', function(event) {
+        element.toggleClass('fill');
+      }),
+      $('li').bind('dblclick', function(event) {
+        $('li').removeClass('fill');
+      })
+    }
+  }
+});
+
 blocTimer.filter('timecode', function() {
   return function(seconds) {
     seconds = Number.parseFloat(seconds);

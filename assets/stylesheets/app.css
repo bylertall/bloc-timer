@@ -45,7 +45,8 @@
         border-radius: 50%;
         width: 25px;
         height: 25px;
-        display: inline-block; }
+        display: inline-block;
+        cursor: pointer; }
       .timer-container .timer-circle ul .fill {
         background-color: #ff7728; }
 
