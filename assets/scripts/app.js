@@ -92,10 +92,10 @@ blocTimer.directive('pomodoroCounter', function() {
 
 blocTimer.filter('timecode', function() {
   return function(seconds) {
-    seconds = Number.parseFloat(seconds);
+    seconds = parseFloat(seconds);
 
     //returned when no time is provided
-    if(Number.isNaN(seconds)) {
+    if(isNaN(seconds)) {
       return '00:00';
     }
 
