@@ -61,8 +61,19 @@ blocTimer.controller('TaskCtrl', ['$scope', function($scope) {
       $scope.list.push(this.task);
       $scope.task = '';
     }
-  }
+  };
 }]);
+
+blocTimer.directive('taskItem', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      element.bind('click', function(event) {
+        element.toggleClass('strikethrough');
+      });
+    }
+  }
+});
 
 blocTimer.filter('timecode', function() {
   return function(seconds) {
