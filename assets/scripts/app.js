@@ -5,7 +5,7 @@ blocTimer.config(['$stateProvider', '$locationProvider', function($stateProvider
   // MAIN
   $stateProvider.state('main', {
     url:'',
-    controller: 'MainCtrl',
+    controller: 'TimerCtrl',
     /*COME BACK TO ADD VIEW FOR TASK LIST????*/
     views: {
       'timer': {
@@ -19,7 +19,7 @@ blocTimer.config(['$stateProvider', '$locationProvider', function($stateProvider
   });
 }]);
 
-blocTimer.controller('MainCtrl', ['$scope', '$interval', function($scope, $interval) {
+blocTimer.controller('TimerCtrl', ['$scope', '$interval', function($scope, $interval) {
   $scope.title = 'BLOC TIMER';
   $scope.counter = 25 * 60;
   $scope.timerSet = null;
@@ -48,6 +48,7 @@ blocTimer.controller('MainCtrl', ['$scope', '$interval', function($scope, $inter
     }
   };
   $scope.onComplete = function() {
+    document.getElementById('alertSound').play();
     alert('Countdown timer has completed!');
   };
 }]);
@@ -70,7 +71,7 @@ blocTimer.directive('taskItem', function() {
     link: function(scope, element, attrs) {
       element.bind('click', function(event) {
         element.toggleClass('strikethrough');
-      });
+      })
     }
   }
 });

@@ -1,6 +1,7 @@
 <div class="timer-container container-fluid">
   <div class="noselect timer-circle">
     <div ng-click="timerToggle()" class="timer-numbers">{{counter | timecode}}</div>
+    <audio id="alertSound" src="assets/sounds/alert.mp3" preload="auto"></audio>
 
     <ul class="text-center">
       <!-- fill circles for each pomodoro completed -->
@@ -16,7 +17,7 @@
   <div class="text-center container">
     <ul class="timer-buttons">
       <li ng-click="timerSelector(25)">WORK</li>
-      <li ng-click="timerSelector(5)">SHORT</li>
+      <li ng-click="timerSelector(.1)">SHORT</li>
       <li ng-click="timerSelector(20)">LONG</li>
     </ul>
   </div>
