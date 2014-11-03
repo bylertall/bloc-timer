@@ -1,4 +1,4 @@
-blocTimer = angular.module('BlocTimer', ['ui.router']);
+blocTimer = angular.module('BlocTimer', ['ui.router', 'ui.sortable']);
 
 blocTimer.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
 

@@ -2,7 +2,7 @@
   <div class="task-list">
     <h1>{{taskTitle}}</h1>
     <table class="table table-striped">
-      <tbody id="task-body">
+      <tbody id="task-body" ui-sortable ng-model="list">
         <tr ng-repeat="task in list">
           <td task-item>{{task}}</td>
         </tr>
