@@ -20,6 +20,7 @@
       list-style: none;
       color: white;
       margin-bottom: 5px;
+      cursor: pointer;
     }
   }
 }
@@ -85,7 +86,7 @@
   font-family: 'Oswald', sans-serif;
   color: #ff7728;
   width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   padding: 0 10px;
   border: 2px solid #ff7728;
   h1 {

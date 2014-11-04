@@ -1,4 +1,4 @@
-blocTimer = angular.module('BlocTimer', ['ui.router', 'ui.sortable']);
+blocTimer = angular.module('BlocTimer', ['ui.router', 'ui.sortable', 'ui.bootstrap']);
 
 blocTimer.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
 
@@ -19,7 +19,7 @@ blocTimer.config(['$stateProvider', '$locationProvider', function($stateProvider
   });
 }]);
 
-blocTimer.controller('TimerCtrl', ['$scope', '$interval', function($scope, $interval) {
+blocTimer.controller('TimerCtrl', ['$scope', '$interval', '$modal', function($scope, $interval, $modal) {
   $scope.title = 'BLOC TIMER';
   $scope.counter = 25 * 60;
   $scope.timerSet = null;
@@ -50,6 +50,12 @@ blocTimer.controller('TimerCtrl', ['$scope', '$interval', function($scope, $inte
   $scope.onComplete = function() {
     document.getElementById('alertSound').play();
     alert('Countdown timer has completed!');
+  };
+  $scope.open = function() {
+    var modalInstance = $modal.open({
+      templateUrl: '/assets/templates/help.html',
+      size: 'lg',
+    });
   };
 }]);
 
