@@ -1,4 +1,4 @@
-<div class="modal-help">
+<div class="modal-help" ng-controller="ModalInstanceCtrl">
   <div class="modal-header">
     <h2 class="modal-title">HELP</h2>
   </div>
@@ -9,6 +9,6 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button class="btn"> OK </button>
+    <button ng-click="$close()" class="btn"> OK </button>
   </div>
 </div>
