@@ -53,7 +53,7 @@ blocTimer.controller('TimerCtrl', ['$scope', '$interval', '$modal', function($sc
   };
   $scope.open = function() {
     var modalInstance = $modal.open({
-      templateUrl: '/assets/templates/help.html',
+      templateUrl: '../../assets/templates/help.html',
       size: 'lg',
     });
   };
