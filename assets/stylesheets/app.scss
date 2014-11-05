@@ -1,3 +1,5 @@
+$primary-color: #409ace;
+
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -7,7 +9,7 @@
   user-select: none;
 }
 .header-container {
-  background-color: #ff7728;
+  background-color: $primary-color;
   h1{
     color: white;
     font-family: 'Oswald', sans-serif;
@@ -25,7 +27,7 @@
   }
 }
 .timer-container {
-  background-color: #ff7728;
+  background-color: $primary-color;
   .timer-circle {
     height: 400px;
     width: 400px;
@@ -38,7 +40,7 @@
       position: relative;
       left: 50px; 
       padding: 100px 0 0; 
-      color: #ff7728;
+      color: $primary-color;
       cursor: pointer;
     }
     ul {
@@ -47,7 +49,7 @@
       padding-bottom: 15px;
 
       li {
-        border: solid 1px #ff7728;
+        border: solid 1px $primary-color;
         border-radius: 50%;
         width: 25px;
         height: 25px;
@@ -55,7 +57,7 @@
         cursor: pointer;
       }
       .fill {
-        background-color: #ff7728;
+        background-color: $primary-color;
       }
     }
   }
@@ -76,7 +78,7 @@
     margin: 0 20px;
     cursor: pointer;
     color: white;
-    background-color: #ff7728;
+    background-color: $primary-color;
     line-height: 90px;
     border-radius: 5%;
     width: 155px;
@@ -84,15 +86,15 @@
 }
 .task-list {
   font-family: 'Oswald', sans-serif;
-  color: #ff7728;
+  color: $primary-color;
   width: 50%;
   margin: 0 auto 100px;
   padding: 0 10px;
-  border: 2px solid #ff7728;
+  border: 2px solid $primary-color;
   h1 {
     font-weight: bold;
     font-size: 30px;
-    border-bottom: 1px solid #ff7728;
+    border-bottom: 1px solid $primary-color;
     padding-bottom: 15px;
   }
   tr {
@@ -114,11 +116,11 @@
     :focus {
       outline: none;
       border:1px solid #c9c9c9;
-      box-shadow: 0 0 10px #ff7728;
+      box-shadow: 0 0 10px $primary-color;
     }
   #task-submit {
     font-size: 15px;
-    background-color: #ff7728;
+    background-color: $primary-color;
     color: white;
     border: none;
   }
