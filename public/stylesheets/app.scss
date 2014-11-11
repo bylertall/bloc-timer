@@ -1,4 +1,5 @@
 $primary-color: #409ace;
+$primary-font: 'Oswald', sans-serif;
 
 .noselect {
   -webkit-touch-callout: none;
@@ -12,7 +13,7 @@ $primary-color: #409ace;
   background-color: $primary-color;
   h1{
     color: white;
-    font-family: 'Oswald', sans-serif;
+    font-family: $primary-font;
     font-size: 70px;
     font-weight: bold;
   }
@@ -23,6 +24,8 @@ $primary-color: #409ace;
       color: white;
       margin-bottom: 5px;
       cursor: pointer;
+      font-family: $primary-font;
+      font-size: 35px;
     }
   }
 }
@@ -62,6 +65,13 @@ $primary-color: #409ace;
     }
   }
 }
+/* HELP */
+.modal-content {
+  .modal-header {
+    background-color: $primary-color;
+    color: white;
+  }
+}
 
 .timer-options {
   margin-top: 25px;
@@ -73,7 +83,7 @@ $primary-color: #409ace;
   }
   li{
     display: inline-block;
-    font-family: 'Oswald', sans-serif;
+    font-family: $primary-font;
     font-size: 40px;
     margin: 0 20px;
     cursor: pointer;
@@ -85,7 +95,7 @@ $primary-color: #409ace;
   }
 }
 .task-list {
-  font-family: 'Oswald', sans-serif;
+  font-family: $primary-font;
   color: $primary-color;
   width: 50%;
   margin: 0 auto 100px;
