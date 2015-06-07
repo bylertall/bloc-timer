@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-<html data-ng-app="BlocTimer">
+<html ng-app="blocTimer">
   <head>
     <title>Bloc Timer</title>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/g/jquery.ui@1.10%28jquery.ui.core.min.js+jquery.ui.widget.min.js+jquery.ui.mouse.min.js+jquery.ui.sortable.min.js%29"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.13.0/sortable.min.js"></script>
-    <script src="javascripts/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
   
-  <body ng-controller="TimerCtrl">
+  <body ng-controller="MainController as main">
+
     <!-- HEADER -->
     <div class="header-container container-fluid">
-      <nav class="header-nav navbar">
-        <div class="container">
-          <div class="timer-header navbar-left">
-            <h1>{{title}}</h1>
+      <nav class="header-nav row">
+        <div>
+
+          <div class="timer-header col-xs-9">
+            <h1>{{::main.title}}</h1>
           </div>
 
-          <ul class="navbar-right">
-            
-            <!-- Use passport for sign-in/sign-up -->
-            <!-- <li>Sign Up</li> -->
+          <!-- Help window: to pop-up w/ info on pomodoro and how to use timer -->
+          <div class="help col-xs-3" ng-click="main.openHelp()">Help</div>
 
-
-            <!-- Help window: to pop-up w/ info on pomodoro and how to use timer (this should be under sign in) -->
-            <li ng-click="open()">Help</li>
-          </ul>
         </div>
       </nav>
     </div>
 
-    <div ui-view = "timer"></div>
-    <div ui-view = "tasklist"></div>
+    <div ui-view="timer" class="container-fluid"></div>
+    <div ui-view="tasklist" class="container-fluid"></div>
 
+    <footer>©2015 Tyler Ball</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/g/jquery.ui@1.10%28jquery.ui.core.min.js+jquery.ui.widget.min.js+jquery.ui.mouse.min.js+jquery.ui.sortable.min.js%29"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.13.0/sortable.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/controllers/timerController.js"></script>
+    <script src="js/controllers/taskController.js"></script>
+    <script src="js/filters/timecodeFilter.js"></script>
+    <script src="js/directives/strikeTask.directive.js"></script>
+    <script src="js/directives/pomodoroCounter.directive.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
-<div class="timer-container container-fluid">
+<div class="timer-container row">
   <div class="noselect timer-circle">
-    <div ng-click="timerToggle()" class="timer-numbers">{{counter | timecode}}</div>
+    <div ng-click="timer.timerToggle()" class="timer-numbers">{{timer.counter | timecode}}</div>
     <audio id="alertSound" src="sounds/alert.mp3" preload="auto"></audio>
 
     <ul class="text-center">
@@ -13,12 +13,12 @@
   </div>
 </div>
 
-<nav class="timer-options navbar">
-  <div class="text-center container">
+<nav class="timer-options row">
+  <div class="text-center">
     <ul class="timer-buttons">
-      <li ng-click="timerSelector(25)">WORK</li>
-      <li ng-click="timerSelector(5)">SHORT</li>
-      <li ng-click="timerSelector(20)">LONG</li>
+      <li ng-click="timer.timerSelector(25)">WORK</li>
+      <li ng-click="timer.timerSelector(5)">SHORT</li>
+      <li ng-click="timer.timerSelector(20)">LONG</li>
     </ul>
   </div>
 </nav>

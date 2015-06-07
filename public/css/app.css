@@ -6,36 +6,43 @@
   -ms-user-select: none;
   user-select: none; }
 
+body, html {
+  overflow-x: hidden; }
+
 .header-container {
-  background-color: #409ace; }
-  .header-container h1 {
+  background-color: #409ace;
+  border-bottom: 3px solid #409ace; }
+  .header-container .timer-header h1 {
     color: white;
     font-family: "Oswald", sans-serif;
-    font-size: 70px;
-    font-weight: bold; }
-  .header-container .navbar-right {
-    margin-top: 20px; }
-    .header-container .navbar-right li {
-      list-style: none;
-      color: white;
-      margin-bottom: 5px;
-      cursor: pointer;
-      font-family: "Oswald", sans-serif;
-      font-size: 35px; }
+    font-size: 4.5em;
+    font-weight: bold;
+    padding-left: 35px; }
+  .header-container .help {
+    color: white;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5em;
+    line-height: 3em;
+    text-align: center; }
+
+[ui-view] {
+  margin-bottom: 30px; }
 
 .timer-container {
-  background-color: #409ace; }
+  background-color: #409ace;
+  border-top: 3px solid #409ace;
+  margin-bottom: 35px; }
   .timer-container .timer-circle {
     height: 400px;
     width: 400px;
-    margin: -30px auto 30px;
+    margin: 0 auto 50px;
     background-color: white;
     border-radius: 50%; }
     .timer-container .timer-circle .timer-numbers {
       font-size: 120px;
       font-weight: bold;
-      position: relative;
-      left: 50px;
+      text-align: center;
       padding: 100px 0 0;
       color: #409ace;
       cursor: pointer; }
@@ -43,11 +50,11 @@
       padding: 0;
       list-style: none;
       padding-bottom: 15px; }
-      .timer-container .timer-circle ul li {
+      .timer-container .timer-circle ul [pomodoro-counter] {
         border: solid 1px #409ace;
         border-radius: 50%;
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
         display: inline-block;
         cursor: pointer; }
       .timer-container .timer-circle ul .fill {
@@ -58,23 +65,21 @@
   background-color: #409ace;
   color: white; }
 
-.timer-options {
-  margin-top: 25px; }
-  .timer-options ul {
-    list-style: none; }
-  .timer-options .timer-buttons {
-    padding: 0; }
-  .timer-options li {
-    display: inline-block;
-    font-family: "Oswald", sans-serif;
-    font-size: 40px;
-    margin: 0 20px;
-    cursor: pointer;
-    color: white;
-    background-color: #409ace;
-    line-height: 90px;
-    border-radius: 5%;
-    width: 155px; }
+.timer-options ul {
+  list-style: none; }
+.timer-options .timer-buttons {
+  padding: 0; }
+.timer-options li {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  margin: 0 20px;
+  cursor: pointer;
+  color: white;
+  background-color: #409ace;
+  line-height: 90px;
+  border-radius: 5%;
+  width: 155px; }
 
 .task-list {
   font-family: "Oswald", sans-serif;
@@ -109,11 +114,21 @@
     font-size: 15px;
     background-color: #409ace;
     color: white;
-    border: none; }
+    border: none;
+    margin-bottom: 20px; }
   .task-list .strikethrough {
     text-decoration: line-through; }
 
-.spacer {
-  height: 100px; }
+/* Media queries */
+@media only screen and (max-width: 992px) and (-webkit-device-pixel-ratio: 2) {
+  .header-container .timer-header h1 {
+    font-size: 8.5em; }
+  .header-container .help {
+    line-height: 5em;
+    text-align: right;
+    padding-right: 35px; }
+
+  .timer-container .timer-circle {
+    margin-top: 35px; } }
 
 /*# sourceMappingURL=app.css.map */
