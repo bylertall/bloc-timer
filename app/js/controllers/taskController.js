@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('blocTimer')
+        .module('app')
         .controller('TaskController', TaskController);
 
     function TaskController() {
@@ -10,7 +10,7 @@
 
         vm.taskListTitle = 'TASK LIST';
         vm.list = [];
-        vm.task;
+        vm.task = '';
         vm.submit = submit;
 
         function submit() {

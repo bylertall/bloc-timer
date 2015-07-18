@@ -1,12 +1,12 @@
 (function() {
     angular
-        .module('blocTimer')
+        .module('app')
         .config(configure);
 
-    configure.$inject = ['$stateProvider', '$locationProvider'];
+    configure.$inject = ['$stateProvider'];
 
 
-    function configure($stateProvider, $locationProvider) {
+    function configure($stateProvider) {
         $stateProvider
             .state('main', {
                 url:'',
@@ -21,6 +21,6 @@
                         templateUrl: '/views/tasklist.html'
                     }
                 }
-            });
+        });
     }
 })();

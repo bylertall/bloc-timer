@@ -2,15 +2,15 @@
     'use strict';
 
     angular
-        .module('blocTimer')
+        .module('app')
         .directive('pomodoroCounter', pomodoroCounter);
 
     function pomodoroCounter () {
         return {
             restrict: 'A',
-            link: function(scope, element, attrs) {
-                element.bind('click', function(event) {
-                    element.toggleClass('fill');
+            link: function(scope, elem, attrs) {
+                elem.bind('click', function(event) {
+                    elem.toggleClass('fill');
                 }),
 
                 $('li').bind('dblclick', function(event) {

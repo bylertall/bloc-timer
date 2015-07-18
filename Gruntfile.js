@@ -4,15 +4,15 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		watch: {
 			files: [
-				'public/stylesheets/app.css',
-				'public/javascripts/app.js'
+				'app/stylesheets/app.css',
+				'app/javascripts/app.js'
 			],
 			tasks: ['build']
 		},
 		uglify: {
 			my_target: {
 			  files: {
-			    'public/javascripts/app.min.js': ['public/javascripts/app.js']
+			    'public/javascripts/app.min.js': ['app/javascripts/app.js']
 			  }
 			}
 		},
@@ -20,8 +20,8 @@ module.exports = function(grunt) {
 			compress: {
 			    files: {
 			      'public/stylesheets/app.min.css': [
-			      	'public/stylesheets/normalize.css', 
-			      	'public/stylesheets/app.css'
+			      	'app/stylesheets/normalize.css',
+			      	'app/stylesheets/app.css'
 			      ]
 			    }
 			  }

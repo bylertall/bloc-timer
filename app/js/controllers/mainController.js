@@ -2,14 +2,13 @@
     'use strict';
 
     angular
-        .module('blocTimer')
+        .module('app')
         .controller('MainController', MainController);
 
-    MainController.$inject = ['$interval', '$modal'];
+    MainController.$inject = ['$modal'];
 
-    function MainController($interval, $modal) {
+    function MainController($modal) {
         var vm = this;
-        var timerSet = null;
         
         vm.title = 'Bloc Timer';
         vm.openHelp = openHelp;

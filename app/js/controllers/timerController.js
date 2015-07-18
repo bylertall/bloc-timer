@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('blocTimer')
+        .module('app')
         .controller('TimerController', TimerController);
 
     TimerController.$inject = ['$interval'];

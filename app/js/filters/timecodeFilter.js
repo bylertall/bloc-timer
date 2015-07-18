@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('blocTimer')
+        .module('app')
         .filter('timecode', timecode);
 
 
